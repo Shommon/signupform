@@ -8,55 +8,61 @@
 </head>
 <body>
     <div class="image-container">
-        <img src="./images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg" alt="" id="background">
-        <div class="logo">
-
+        <!-- <img src="./images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg" alt="" id="background"> -->
+        <div class="logo-container-background"></div>
+        <div class="logo-container">
+            <img src="./images/odin-lined.png" alt=""><p>ODIN</p>
         </div>
+
+        <footer>Photo by Syuhei Inoue on <a href="">Unsplash</a></footer>
     </div>
 
     <div class="form-container">
 
         <section id="form-header">
-            <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h2>
-            <p>You know you want to.</p>
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+            <p>You know you <em>want</em> to.</p>
         </section>
         
 
         <section id="form">
             <form action="">
                 <fieldset>
-                    <legend>Lets Do this!</legend>
-
-                    <div class="first-column">
-                        <label for="firstname">First Name</label>
-                        <input type="text" name="user-firstname" id="firstname">
-
-                        <label for="email">Email</label>
-                        <input type="email" name="user-email" id="email">
-
-                        <label for="password">Password</label>
-                        <input type="password" name="user-password" id="password">
-                    </div>
-
-                    <div class="second-column">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" name="user-lastname" id="lastname">
-
-                        <label for="phonenumber">Phone Number</label>
-                        <input type="number" name="user-phonenumber" id="phonenumber">
-
-                        <label for="password-confirm"></label>
-                        <input type="password" id="password-confirm">
-                    </div>
                     
 
+                    <div class="signup-form-container">
+                        <p>Lets Do This!</p>
+                        <div class="row">
+                            <div class="first-column">
+                                <label for="firstname">FIRST NAME</label>
+                                <input type="text" name="user-firstname" id="firstname">
+        
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="user-email" id="email">
+        
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="user-password" id="password">
+                            </div>
+        
+                            <div class="second-column">
+                                <label for="lastname">LAST NAME</label>
+                                <input type="text" name="user-lastname" id="lastname">
+        
+                                <label for="phonenumber">PHONE NUMBER</label>
+                                <input type="number" name="user-phonenumber" id="phonenumber">
+        
+                                <label for="password-confirm">CONFIRM PASSWORD</label>
+                                <input type="password" id="password-confirm">
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
-                <button type="submit">Create Account</button>
+                
+                <footer><button type="submit" id="create-account-btn">Create Account</button><p>Already have an account? <a href="">Log in</a></p></footer>
             </form>
         </section>
-
-        <p>Already have an account? Log in</p>
+        
 
     </div>
 </body>

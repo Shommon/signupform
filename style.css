@@ -8,6 +8,9 @@
 :root{
     --viewwidth: 100vw;
     --viewheight: 100vh;
+    --signup-leftpadding:2em;
+    --text-color: #1F2937;
+    --background-color: #0E0E0E;
 }
 
 * {
@@ -29,10 +32,11 @@ html {
 
     display: flex;
     justify-content: center;
+    background-color: var(--background-color);
 }
 
 body {
-    outline: green dashed 5px;
+    /* outline: green dashed 5px; */
     max-height: var(--viewheight);
     max-width: var(--viewwidth);
 
@@ -43,36 +47,86 @@ body {
     display: flex;
     
 }
-
+/* Image Logo */
 .image-container{
-    outline: pink dashed 5px;
+    /* outline: pink dashed 5px; */
     width: 100%;
     height: 100%;
 
     flex:1;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    
+    background-image: url(./images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg);
+    background-size: 40vw;
+    /* filter:brightness(1.2) contrast(0.6); */
 }
 
+.logo-container-background{
+    position: absolute;
+    /* outline: gold 5px dashed; */
+    width: 27.2vw;
+    height: 15vh;
+    top: 20vh;
+    background-color: black;
+    filter: opacity(0.6);
+}
 
-#background{
-    /* width:540px; you can use % */
-    width: 150%;
-    height: auto;
+.logo-container {
+    position: absolute;
+    /* outline: gold 5px dashed; */
+    width: 26.9vw;
+    height: 15vh;
+    top: 20vh;
+
+    color: white;
+    font-size: 4vw;
+    font-family: Norse-bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
+.logo-container p {
+    opacity: 1;
+}
+.logo-container img {
+    height: 80%;
+    opacity: 1;
+}
+
+.image-container footer{
+    color: white;
+    font-size: large;
+    /* outline: blue 10px dashed; */
+    font-size: 0.6em;
+    /* background-color: black; */
+    padding: 3px;
+}
+
+footer a {
+    color: white;
+}
+
+/* 
 #background:hover {
     --webkit-filter: blur(2px);
     filter: blur(2px);
     transform: scale(1.05);
     transition: 0.5s all ;
-}
+} */
 
 
 
 /* Forms */
 .form-container {
-    outline: lightcoral dashed 5px;
+    /* outline: lightcoral dashed 5px; */
     width: 100%;
     height: 100%;
     
@@ -80,21 +134,106 @@ body {
 
     display: flex;
     flex-direction: column;
-    
+    background-color: #F9FAFB;
+
+    font-family: Arial;
+
+}
+
+.form-container fieldset{
+    border-color: transparent;
+    padding-top: 2vh;
+    /* box-shadow: ; */
 }
 
 #form-header {
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 8em;
-    padding-bottom: 3em;
+    padding-left: var(--signup-leftpadding);
+    padding-right: 7vw;
+    padding-top: 15vh;
+    padding-bottom: 4vh;
 
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    font-size: 1em;
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    height: 15vw;
+    gap: 3vh;
+    padding-left: var(--signup-leftpadding) ;
+    padding-top: 10px;
+    /* outline: 1px solid black; */
+    background-color: white;
+
+    box-shadow: 0px 5px 8px -1px rgba(120, 120, 120, 0.75);
+}
+
+.signup-form-container p {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.row{
+    display: flex;
+    /* outline: 2px black dashed; */
+    width: 100%;
+    gap: 3.5vw;
+}
+
+.first-column,
+.second-column{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7em;
+    /* gap: 1vh; */
+}
+
+.first-column input,
+.second-column input{
+    margin-bottom: 10px ;
+}
+
+.first-column label,
+.second-column label {
+    font-weight: bold;
+    font-size: .7em;
+    padding-bottom: 1px;
+    letter-spacing: 1px;
+    color: #585F6A;
 }
 
 
-.first-column{
+.form-container footer {
+    /* outline: 1px dashed black; */
+    padding-left: var(--signup-leftpadding);
+    padding-top: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.form-container footer p{
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-container footer a{
+    color: #1B482E;
+}
+
+#create-account-btn {
+    background-color: #1B482E;
+    color:white;
+    padding: .7em 2em;
+    border-radius: 0.4em;
+    width: 12vw;
 
 }
