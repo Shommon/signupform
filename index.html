@@ -32,33 +32,48 @@
 
                     <div class="signup-form-container">
                         <p>Lets Do This!</p>
-                        <div class="row">
-                            <div class="first-column">
+                        <div class="row1">
+                            <div class="col1">
                                 <label for="firstname">FIRST NAME</label>
-                                <input type="text" name="user-firstname" id="firstname">
-        
-                                <label for="email">EMAIL</label>
-                                <input type="email" name="user-email" id="email">
-        
-                                <label for="password">PASSWORD</label>
-                                <input type="password" name="user-password" id="password">
+                                <input type="text" name="user-firstname" id="firstname" required>
                             </div>
-        
-                            <div class="second-column">
+                    
+                            <div class="col1">
                                 <label for="lastname">LAST NAME</label>
-                                <input type="text" name="user-lastname" id="lastname">
-        
-                                <label for="phonenumber">PHONE NUMBER</label>
-                                <input type="number" name="user-phonenumber" id="phonenumber">
-        
-                                <label for="password-confirm">CONFIRM PASSWORD</label>
-                                <input type="password" id="password-confirm">
+                                <input type="text" name="user-lastname" id="lastname" required>
                             </div>
+                            
+                            
                         </div>
+                        <div class="row2">
+                            <div class="col2">
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="user-email" id="email" required>
+                            </div>
+                            <div class="col2">
+                                <label for="phonenumber">PHONE NUMBER</label>
+                                <input type="number" name="user-phonenumber" id="phonenumber" required>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="row3">
+                            <div class="col3">
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="user-password" id="password" minlength="5" max="20" required>
+                            </div>
+
+                            <div class="col3">
+                                <label for="password-confirm">CONFIRM PASSWORD</label>
+                                <input type="password" id="password-confirm" required>
+                            </div>
+
+
+                        </div>
+                            
                     </div>
                 </fieldset>
 
-                
                 <footer><button type="submit" id="create-account-btn">Create Account</button><p>Already have an account? <a href="">Log in</a></p></footer>
             </form>
         </section>

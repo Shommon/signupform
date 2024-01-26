@@ -114,14 +114,6 @@ footer a {
     color: white;
 }
 
-/* 
-#background:hover {
-    --webkit-filter: blur(2px);
-    filter: blur(2px);
-    transform: scale(1.05);
-    transition: 0.5s all ;
-} */
-
 
 
 /* Forms */
@@ -179,33 +171,24 @@ footer a {
     color: var(--text-color);
 }
 
-.row{
+.row1,
+.row2,
+.row3 {
     display: flex;
-    /* outline: 2px black dashed; */
-    width: 100%;
+    font-size: 0.5em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: rgb(50, 50, 50);
+
     gap: 3.5vw;
+
 }
 
-.first-column,
-.second-column{
+.col1,
+.col2,
+.col3 {
     display: flex;
     flex-direction: column;
-    font-size: 0.7em;
-    /* gap: 1vh; */
-}
-
-.first-column input,
-.second-column input{
-    margin-bottom: 10px ;
-}
-
-.first-column label,
-.second-column label {
-    font-weight: bold;
-    font-size: .7em;
-    padding-bottom: 1px;
-    letter-spacing: 1px;
-    color: #585F6A;
 }
 
 
@@ -236,4 +219,17 @@ footer a {
     border-radius: 0.4em;
     width: 12vw;
 
+}
+
+/* Pseudo Classes Inputs */
+
+.first-column input:focus,
+.second-column input:focus {
+    outline: 2px solid rgb(136, 136, 255);
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(5, 0, 102, 0.75);
+}
+
+keep {
+    color: #E5E7EB;
 }
