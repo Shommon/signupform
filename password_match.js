@@ -3,9 +3,10 @@ const passwordconfirm = document.querySelector('#password-confirm');
 const col3 = document.querySelector('.col3');
 var requirementinfo = document.createElement('p');
 
-requirementinfo.id = 'requirementText'
-requirementinfo.textContent = 'Password Must contain 5-20 characters'
-
+requirementinfo.id = 'requirementText';
+requirementinfo.textContent = 'Password Must contain 5-20 characters';
+requirementinfo.classList.add('notlength');
+var metlength = false;
 
 passwordinput.addEventListener('input', (e) => {
     addLengthRequirementText(e);
@@ -55,27 +56,27 @@ passwordconfirm.addEventListener('input', () => {
         //check if passwordinput element already has requirement text
         //Add passwordinput element if it doesnt
         if (!col3.querySelector('#requirementText')){
-            console.log('True');
+            col3.appendChild(requirementinfo)
         }
     }
 
     function checkInputLength() {
         var input = passwordinput.value;
-        if (input.length >= 5){
-            console.log('Met Requirement');
-            metLengthRequirement();
-        } else {
-            console.log('Has Not Met Requirement');
-            notMetLengthRequirement();
+        if (metlength === false && input.length >= 5){
+            requirementToggle();
+            metlength = true;
+        } else if (metlength === true && input.length <= 4) {
+            requirementToggle();
+            metlength = false;
         }
     }
 
-    function metLengthRequirement() {
-        requirementinfo.classlist.remove('error');
-        requirementinfo.classList.add('metlength');
-    }
 
-    function notMetLengthRequirement() {
-        requirementinfo.classlist.remove('metlength');
-        requirementinfo.classList.add('error');
+
+    function requirementToggle(){
+        requirementinfo.classList.toggle('metlength');
+        requirementinfo.classList.toggle('notlength');
+
+        // parent.removeChild(childnode);
+        // parent.appendChild(requirementinfo);
     }

@@ -246,5 +246,9 @@ footer a {
 }
 
 .metlength {
-    color: green;
+    background-color: lightgreen;
+}
+
+.notlength {
+    background-color: lightcoral;
 }
