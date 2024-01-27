@@ -9,7 +9,7 @@ requirementinfo.textContent = 'Password Must contain 5-20 characters'
 
 passwordinput.addEventListener('input', (e) => {
     addLengthRequirementText(e);
-    // checkInputLength();
+    checkInputLength();
 
 })
 passwordconfirm.addEventListener('input', () => {
@@ -51,11 +51,12 @@ passwordconfirm.addEventListener('input', () => {
 // col3.appendChild(requirementinfo);
 
 //Handle Length Requirement
-    function addLengthRequirementText(element) {
-        // console.log(element.target.id)
-        var parentElement = element.target
-
-
+    function addLengthRequirementText() {
+        //check if passwordinput element already has requirement text
+        //Add passwordinput element if it doesnt
+        if (!col3.querySelector('#requirementText')){
+            console.log('True');
+        }
     }
 
     function checkInputLength() {
